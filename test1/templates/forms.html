@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+        #forminput1{
+        color: white;
+        background: black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form action="{% url 'completed_form_page' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Send Form</button>
+</form>
+</body>
+</html>

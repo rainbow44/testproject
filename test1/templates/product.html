@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Name: {{product.name}}</h1>
+<h1>Price: {{product.price}} </h1>
+<h1>Description: {{product.description}} </h1>
+<img src="{{product.image.url}}">
+<h1>Category: {{product.category.name}}</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form}}
+     <button type="submit">Send Form</button>
+</form>
+{% if username %}
+{{username}}
+{% endif %}
+{% endblock %}
